@@ -11,7 +11,7 @@
 
     <div class="container mt-5 pt-5">
         <h1 class='text-center mt-3 pt-3'>Modifier mon Header</h1>
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="{{route('header.update')}}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <div class="form-group">

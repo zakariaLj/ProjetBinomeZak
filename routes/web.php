@@ -18,8 +18,10 @@ return view('index');
 
 Route::get('/admin', function () {
     return view('admin');
-});
+})->name('admin');
 
 
 // Route Admin -> Header
 
+Route::get('/header/editHeader', 'HeaderController@edit')->name('header.edit');
+Route::post('/header/editHeader', 'HeaderController@update')->name('header.update');

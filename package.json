@@ -16,9 +16,17 @@
         "lodash": "^4.17.13",
         "resolve-url-loader": "^3.1.0",
         "sass": "^1.15.2",
-        "sass-loader": "^8.0.0"
+        "sass-loader": "^8.0.0",
+        "vue-template-compiler": "^2.6.11"
     },
     "dependencies": {
-        "bootstrap": "^4.4.1"
+        "bootstrap": "^4.4.1",
+        "easing": "^1.2.1",
+        "jquery": "^3.5.0",
+        "morphext": "^2.4.7",
+        "popper.js": "^1.16.1",
+        "superfish": "^1.7.10",
+        "wow.js": "^1.2.2",
+        "wowjs": "^1.1.3"
     }
 }

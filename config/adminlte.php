@@ -253,7 +253,7 @@ return [
                 ],
                 [
                 'text' => 'Section Subscribe',
-                'url' => '#',
+                'url' => 'subscribe.editSubscribe',
                 ],
                 [
                 'text' => 'Section Services',

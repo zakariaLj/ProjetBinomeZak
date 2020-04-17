@@ -18,4 +18,7 @@ return view('index');
 
 Route::get('/admin', function () {
     return view('admin');
-});
+})->name('admin');
+
+Route::get('subscribe.editSubscribe','SubscribeController@edit');
+Route::post('subscribe.editSubscribe','SubscribeController@update')->name('subscribe.update'); 

@@ -9,6 +9,7 @@
   @include('templates.portfolio')
   @include('templates.testimoniales')
   @include('templates.team')
+  @include('templates.subscribe')
   @include('templates.contact')
   @include('templates.footer')
 

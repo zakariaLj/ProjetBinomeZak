@@ -5,7 +5,14 @@
     <div class="container">
 
       <div id="logo" class="pull-left">
+
+        @if ($header != null)
+              <a href="#hero"><img src="{{asset('storage/'.$header->imgHeader_path)}}" alt="" title="" /></img></a>
+        @else
+            
         <a href="#hero"><img src="img/logo.png" alt="" title="" /></img></a>
+        @endif
+
         <!-- Uncomment below if you prefer to use a text image -->
         <!--<h1><a href="#hero">Header 1</a></h1>-->
       </div>

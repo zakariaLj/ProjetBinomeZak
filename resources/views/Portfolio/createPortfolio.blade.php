@@ -4,7 +4,7 @@
 
 <div class="container mt-5 pt-5">
         <h1 class='text-center mt-3 pt-3'> Ajout d'un portfolio</h1>
-        <form action="{{route("portfolio.store")}}" method="post" enctype="multipart/form-data">
+        <form action="{{route("Portfolio.store")}}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="nom">Nom du portfolio</label>

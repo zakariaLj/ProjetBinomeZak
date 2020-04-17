@@ -247,12 +247,12 @@ return [
                 ],
                 [
                 'text' => 'Section About ',
-                'url' => '#',
+                'url' => 'About/editAbout',
                 ],
 
                 [
                 'text' => 'Section Portfolio',
-                'url' => '#',
+                'url' => 'Portfolio',
                 ],
                 [
                 'text' => 'Section Team',

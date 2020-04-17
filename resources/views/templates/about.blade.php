@@ -7,7 +7,14 @@
         <div class="col-md-12">
           <h3 class="section-title">About Us</h3>
           <div class="section-title-divider"></div>
+          @if ($about != null)
+          <p class="section-description">{{$about->description_1}}</p>
+              
+          @else
           <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
+              
+          @endif
+
         </div>
       </div>
     </div>
@@ -19,18 +26,23 @@
         </div>
 
         <div class="col-md-6 about-content">
+          @if ($about != null)
+          <h2 class="about-title">{{$about->Titre}}</h2>
+              
+          @else
           <h2 class="about-title">We provide great services and ideass</h2>
-          <p class="about-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-            in reprehenderit in voluptate
-          </p>
-          <p class="about-text">
-            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-            id est laborum
-          </p>
-          <p class="about-text">
-            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt molli.
-          </p>
+             
+          @endif
+
+
+          @if ($about != null)
+          <p class="section-description">{{$about->description_2}}</p>
+              
+          @else
+          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
+              
+          @endif
+
         </div>
       </div>
     </div>

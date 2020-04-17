@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Header;
+use App\About;
+use App\Portfolio; 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function () {
-return view('index');
+    $header = Header::find(1);
+    $about = About::find(1);
+    $portfolios = Portfolio::all();
+
+return view('index', compact('header','about','portfolios'));
 });
 
 Route::get('/admin', function () {
@@ -25,3 +31,12 @@ Route::get('/admin', function () {
 
 Route::get('/header/editHeader', 'HeaderController@edit')->name('header.edit');
 Route::post('/header/editHeader', 'HeaderController@update')->name('header.update');
+
+// Route Admin-> About
+
+Route::get('/About/editAbout', 'AboutController@edit')->name('about');
+Route::post('/About/editAbout', 'AboutController@update')->name('about.update');
+
+// Route Admin->Portfolio
+
+Route::resource('/Portfolio','PortfolioController');

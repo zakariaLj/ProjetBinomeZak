@@ -1,11 +1,10 @@
 @extends('adminlte::page')
 
 @section('content')
-    @include('templates.nav');
 
     <div class="container mt-5 pt-5">
         <h1 class='text-center mt-3 pt-3'> Portfolio</h1>
-    <a href="{{route('portfolio.create')}}">Ajouter</a>
+    <a href="{{route('Portfolio.create')}}">Ajouter</a>
     
     <table class="table">
         <thead>
@@ -19,12 +18,12 @@
         <tbody>
             @foreach ($portfolios as $portfolio)
                 <tr>
-                    <td>{{$portfolio->nom}}</td>
-                    <td><img style='width:100px'src="{{asset('storage/'.$portfolio->img_path)}}" /></td>
-                    <td>{{$portfolio->description}}</td>
+                    <td>{{$portfolio->Name}}</td>
+                    <td><img style='width:100px'src="{{asset('storage/'.$portfolio->ImgPortfolio_path)}}" /></td>
+                    <td>{{$portfolio->DescriptionPortfolio}}</td>
                     <td>
-                    <a href="{{route('portfolio.edit', $portfolio->id)}}"><button class="btn btn-primary"> Edit</button></a> 
-                    <form action="{{route('portfolio.destroy', $portfolio->id)}}" method="post">
+                    <a href="{{route('Portfolio.edit', $portfolio->id)}}"><button class="btn btn-primary"> Edit</button></a> 
+                    <form action="{{route('Portfolio.destroy', $portfolio->id)}}" method="post">
                         @csrf
                         @method('delete')
                         <button class="btn btn-danger"> Delet</button>    

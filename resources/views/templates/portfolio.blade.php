@@ -11,17 +11,21 @@
         </div>
       </div>
 
+      @foreach ($portfolios as $portfolio)
       <div class="row">
         <div class="col-md-3">
-          <a class="portfolio-item" style="background-image: url(img/portfolio-1.jpg);" href="">
+          <a class="portfolio-item" style="background-image: url({{asset('storage/'.$portfolio->ImgPortfolio_path)}});" href="">
             <div class="details">
-              <h4>Portfolio 1</h4>
-              <span>Alored dono par</span>
+              <h4>{{$portfolio->Name}}</h4>
+              <span>{{$portfolio->DescriptionPortfolio}}</span>
             </div>
           </a>
         </div>
+          
+      @endforeach
 
-        <div class="col-md-3">
+
+        {{-- <div class="col-md-3">
           <a class="portfolio-item" style="background-image: url(img/portfolio-2.jpg);" href="">
             <div class="details">
               <h4>Portfolio 2</h4>
@@ -82,7 +86,7 @@
               <span>Alored dono par</span>
             </div>
           </a>
-        </div>
+        </div> --}}
 
       </div>
     </div>

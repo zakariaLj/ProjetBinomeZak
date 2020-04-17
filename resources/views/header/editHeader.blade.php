@@ -29,7 +29,7 @@
                 
                 <div class="form-group">
                     <label for="description">Description</label>
-                    <textarea name="description" id="description" cols="30" rows="10" class='form-control' value='{{!empty($header) ? $header->HeaderDescription : ''}}' ></textarea>
+                    <textarea name="description" id="description" cols="30" rows="10" class='form-control' >{{!empty($header) ? $header->HeaderDescription : ''}}</textarea>
                         <button type="submit" class="d-block mx-auto btn btn-primary">Modifier</button>
             </form>
     </div>

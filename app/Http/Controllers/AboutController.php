@@ -21,8 +21,9 @@ class AboutController extends Controller
         $about = About::find(1);
 
         if ($about != null) {
-            if (condition) {
-                # code...
+            if (request('img') != null) {
+                $about->imgAbout_path =request('img')->store('img');
+                
             }
             $about->description_1 = request('description1');
             $about->Titre = request('titre');
@@ -37,6 +38,8 @@ class AboutController extends Controller
             $about->description_1 = request('description1');
             $about->Titre = request('titre');
             $about->description_2 = request('description2');
+            $about->imgAbout_path =request('img')->store('img');
+
             $about->save();
 
             return redirect()->route('admin');

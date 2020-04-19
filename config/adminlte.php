@@ -268,11 +268,11 @@ return [
                 ],
                 [
                 'text' => 'Section Testimonials',
-                'url' => '#',
+                'url' => 'testimonial',
                 ],
                 [
                 'text' => 'Section contact',
-                'url' => '#',
+                'url' => '/admin/message',
                 ],
             ],
         ],

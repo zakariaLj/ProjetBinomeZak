@@ -11,7 +11,7 @@
         </div>
       </div>
       @foreach ($testimonials as $testimonial)
-      {{-- @if ($loop->index%2==0) --}}
+      @if ($loop->index%2==0)
       <div class="row">
         <div class="col-md-3">
           <div class="profile">
@@ -26,7 +26,25 @@
           </div>
         </div>
       </div>
-      {{-- @endif --}}
+
+      @else 
+
+      <div class="row">
+        <div class="col-md-9">
+          <div class="quote">
+            <b><img src="img/quote_sign_left.png" alt=""></b> {{$testimonial->commentaire}} <small><img src="img/quote_sign_right.png" alt=""></small>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="profile">
+          <div class="pic"><img src="{{asset('storage/'.$testimonial->img_path)}}" alt=""></div>
+          <h4>{{$testimonial->nom}}</h4>
+          <span>{{$testimonial->fonction}}</span>
+          </div>
+        </div>
+      </div>
+
+      @endif
       @endforeach
     </div>
   </section>

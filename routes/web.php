@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Subscribe;
 use App\Service;
 use App\Testimonial;
+use App\Message;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +20,8 @@ Route::get('/', function () {
     $subscribe = Subscribe::find(1);
     $services = Service::all();
     $testimonials = Testimonial::all();
-return view('index', compact('subscribe','services','testimonials'));
+    $messages = Message::all();
+return view('index', compact('subscribe','services','testimonials','messages'));
 });
 
 Route::get('/admin', function () {
@@ -31,3 +33,6 @@ Route::post('subscribe.editSubscribe','SubscribeController@update')->name('subsc
 
 Route::resource('service','ServiceController');
 Route::resource('testimonial','TestimonialController');
+
+Route::post('/message','MessageController@store')->name('message.store');
+Route::get('/admin/message','MessageController@index');

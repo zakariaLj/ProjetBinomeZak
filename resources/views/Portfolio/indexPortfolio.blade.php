@@ -21,7 +21,7 @@
                     <td>{{$portfolio->Name}}</td>
                     <td><img style='width:100px'src="{{asset('storage/'.$portfolio->ImgPortfolio_path)}}" /></td>
                     <td>{{$portfolio->DescriptionPortfolio}}</td>
-                    <td>
+                    <td class="d-flex">
                     <a href="{{route('Portfolio.edit', $portfolio->id)}}"><button class="btn btn-primary"> Edit</button></a> 
                     <form action="{{route('Portfolio.destroy', $portfolio->id)}}" method="post">
                         @csrf

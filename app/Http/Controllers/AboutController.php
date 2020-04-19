@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\About;
 
 class AboutController extends Controller
@@ -22,6 +23,7 @@ class AboutController extends Controller
 
         if ($about != null) {
             if (request('img') != null) {
+                storage::delete($about->imgAbout_path);
                 $about->imgAbout_path =request('img')->store('img');
                 
             }

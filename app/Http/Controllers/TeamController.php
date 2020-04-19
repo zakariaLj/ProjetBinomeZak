@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use App\Portfolio;
-class PortfolioController extends Controller
+use App\Team;
+
+class TeamController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +15,8 @@ class PortfolioController extends Controller
      */
     public function index()
     {
-        $portfolios = Portfolio::all();
-
-        return view('Portfolio.indexPortfolio', compact('portfolios'));
+        $teams = Team::all();
+        return view('Team.index',compact('teams'));
     }
 
     /**
@@ -26,8 +26,8 @@ class PortfolioController extends Controller
      */
     public function create()
     {
-        return view('Portfolio.createPortfolio ');
-     }
+        return view('Team.create');
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -37,15 +37,14 @@ class PortfolioController extends Controller
      */
     public function store(Request $request)
     {
-        $portfolio = new Portfolio();
+        $team = new Team();
 
-        $portfolio->Name = request('nom');
-        $portfolio->ImgPortfolio_path = request('img')->store('img');
-        $portfolio->DescriptionPortfolio = request('description');
+        $team->Name = request('nom');
+        $team->Imgteam_path = request('img')->store('img');
+        $team->Descriptionteam = request('description');
+        $team->save();
 
-        $portfolio->save();
-
-        return redirect()->route('Portfolio.index');
+        return redirect()->route('Team.index');
     }
 
     /**
@@ -67,9 +66,8 @@ class PortfolioController extends Controller
      */
     public function edit($id)
     {
-        $portfolio = Portfolio::find($id);
-
-        return view('Portfolio.editPortfolio',compact('portfolio'));
+        $team = Team::find($id);
+        return view('Team.edit',compact('team'));
     }
 
     /**
@@ -81,25 +79,19 @@ class PortfolioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $portfolio = Portfolio::find($id);
-
-            // si je veux supprimer l'ancienne img
+        $team = Team::find($id);
             if(request('img') !== null){
-                Storage::delete($portfolio->ImgPortfolio_path);  
-                $portfolio->ImgPortfolio_path = request('img')->store('img');
+            Storage::delete($team->Imgteam_path);
+            $team->Imgteam_path = request('img')->store('img');
 
             }
+        $team->Name = request('nom');
+        $team->Imgteam_path = request('img')->store('img');
+        $team->Descriptionteam = request('description');
+        
+        $team->save();
 
-        $portfolio->Name = request('nom');
-        $portfolio->DescriptionPortfolio = request('description');
-
-        $portfolio->save();
-
-        return redirect()->route('Portfolio.index');
-
-
-
-
+        return redirect()->route('Team.index');
     }
 
     /**
@@ -110,11 +102,11 @@ class PortfolioController extends Controller
      */
     public function destroy($id)
     {
-        $portfolio = Portfolio::find($id);
+        $team = Team::find($id);
 
-        Storage::delete($portfolio->ImgPortfolio_path);
+        Storage::delete($team->Imgteam_path);
 
-        $portfolio->delete();
+        $team->delete();
 
         return redirect()->back();
     }

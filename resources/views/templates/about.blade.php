@@ -22,7 +22,7 @@
       <div class="row">
 
         <div class="col-lg-6 about-img">
-        @if ($about != null)
+        @if ($about !== null)
             <img src="{{asset('storage/'.$about->imgAbout_path)}}" alt="">
             
         @else

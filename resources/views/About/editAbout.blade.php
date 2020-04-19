@@ -23,7 +23,7 @@
                
                 <div class="form-group">
                     <label for="img">Image</label>
-                    <input type="file" name="img" class="form-control" value="{{!empty($about) ? $about->imgAbout_path: ''}}">
+                    <input type="file" name="img" class="form-control" value="{{!empty($about) ? $about->ImgAbout : ''}}">
                     </div>
 
                         <button type="submit" class="d-block mx-auto btn btn-primary">Modifier</button>

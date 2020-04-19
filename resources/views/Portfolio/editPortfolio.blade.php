@@ -13,7 +13,14 @@
             </div>
             <div class="form-group">
                 <label for="img">Image</label>
-                <input type="file" id="img"  name='img' class="form-control" value='{{$portfolio->ImgPortfolio_path}}'>
+
+                <img src="{{asset('storage/'.$portfolio->ImgPortfolio_path)}}" alt="" srcset="">
+                @if ($portfolio !== null)
+                    <input type="file" id="img"  name='img' class="form-control" value="{{$portfolio->ImgPortfolio_path}}">
+                @else
+                    <input type="file" id="img"  name='img' class="form-control" value="">                    
+                @endif
+
             </div>
                 <div class="form-group">
                     <label for="description">Description</label>
@@ -21,6 +28,7 @@
                         {{$portfolio->DescriptionPortfolio}}
                     </textarea>
                         <button type="submit" class="d-block mx-auto btn btn-primary">Modifier</button>
+                </div>
             </form>
     </div>
 @endsection

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Header;
 use App\About;
 use App\Portfolio; 
+use App\Team;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,8 +19,9 @@ Route::get('/', function () {
     $header = Header::find(1);
     $about = About::find(1);
     $portfolios = Portfolio::all();
+    $teams = Team::all();
 
-return view('index', compact('header','about','portfolios'));
+return view('index', compact('header','about','portfolios','teams'));
 });
 
 Route::get('/admin', function () {
@@ -40,3 +42,7 @@ Route::post('/About/editAbout', 'AboutController@update')->name('about.update');
 // Route Admin->Portfolio
 
 Route::resource('/Portfolio','PortfolioController');
+
+// Route Admin-> Team
+
+Route::resource('/Team','TeamController');

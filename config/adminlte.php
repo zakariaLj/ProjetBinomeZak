@@ -214,10 +214,10 @@ return [
             'topnav' => true,
         ],
         [
-        'text' => 'pages',
-        'url' => 'admin/pages',
-        'icon' => 'far fa-fw fa-file',
-        'label' => 4,
+        'text' => 'Retour au site',
+        'url' => '/',
+        'icon' => 'fas fa-globe',
+        // 'label' => ,
         'label_color' => 'success',
         ],
         [
@@ -256,7 +256,7 @@ return [
                 ],
                 [
                 'text' => 'Section Team',
-                'url' => '#',
+                'url' => 'Team',
                 ],
                 [
                 'text' => 'Section Subscribe',
@@ -276,19 +276,7 @@ return [
                 ],
             ],
         ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'aqua',
-        ],
+
     ],
 
     /*

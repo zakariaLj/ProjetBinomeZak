@@ -43,6 +43,8 @@
             </ul>
           </li>
           <li><a href="#contact">Contact Us</a></li>
+          <li><a href="/admin">Admin</a></li>
+
         </ul>
       </nav>
       <!-- #nav-menu-container -->

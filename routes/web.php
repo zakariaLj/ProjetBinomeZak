@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Subscribe;
+use App\Service;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function () {
-return view('index');
+    $subscribe = Subscribe::find(1);
+    $services = Service::all();
+return view('index', compact('subscribe','services'));
 });
 
 Route::get('/admin', function () {
@@ -22,3 +26,6 @@ Route::get('/admin', function () {
 
 Route::get('subscribe.editSubscribe','SubscribeController@edit');
 Route::post('subscribe.editSubscribe','SubscribeController@update')->name('subscribe.update'); 
+
+Route::resource('service','ServiceController');
+

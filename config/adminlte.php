@@ -214,6 +214,13 @@ return [
             'topnav' => true,
         ],
         [
+        'text' => 'pages',
+        'url' => 'admin/pages',
+        'icon' => 'far fa-fw fa-file',
+        'label' => 4,
+        'label_color' => 'success',
+        ],
+        [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
@@ -236,7 +243,7 @@ return [
             'submenu' => [
                 [
                 'text' => 'Section Header',
-                'url' => '#',
+                'url' => 'header/editHeader',
                 ],
                 [
                 'text' => 'Section About ',
@@ -257,7 +264,7 @@ return [
                 ],
                 [
                 'text' => 'Section Services',
-                'url' => '#',
+                'url' => 'service',
                 ],
                 [
                 'text' => 'Section Testimonials',

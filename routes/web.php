@@ -66,6 +66,7 @@ Route::get('/About/indexAbout', 'AboutController@index')->name('about.index');
 // Route Admin->Portfolio
 
 Route::resource('/Portfolio','PortfolioController');
+Route::get('/search','PortfolioController@search');
 
 // Route Admin-> Team
 

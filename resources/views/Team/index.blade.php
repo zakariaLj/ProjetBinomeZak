@@ -5,11 +5,13 @@
     <div class="container mt-5 pt-5">
         <h1 class='text-center mt-3 pt-3'> Team</h1>
                             
-                    @if (count($teams)< 4)
+
+                @if (count($teams)<4)
+                <a name="" id="" class="btn btn-primary" href="{{route('Team.create')}}" role="button">Ajouter</a>  
+                    
+                @endif
                 
-                    <a name="" id="" class="btn btn-primary" href="{{route('Team.create')}}" role="button">Ajouter</a>  
-                
-                    @endif
+                    
 
                     <div class="row">
                           <div class="col-12">

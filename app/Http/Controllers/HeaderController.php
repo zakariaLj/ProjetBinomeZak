@@ -45,7 +45,7 @@ class HeaderController extends Controller
                     $header->HeaderDescription = request('description');
 
                     $header->save();
-                    return redirect()->route('admin');
+                    return redirect()->route('header.index');
         }else{      // Dans ce cas il n'existe pas on va devoir avoir besoin d'un new header
                         $header = new Header();
 
@@ -56,7 +56,7 @@ class HeaderController extends Controller
                         $header->HeaderDescription = request('description');
 
                         $header->save();
-                        return redirect()->route('admin');
+                        return redirect()->route('header.index');
         }
 
 

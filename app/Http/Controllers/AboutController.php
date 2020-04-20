@@ -40,7 +40,7 @@ class AboutController extends Controller
             $about->description_2 = request('description2');
             $about->save();
 
-            return redirect()->route('admin');
+            return redirect()->route('about.index');
         } else {
             
             $about = new About();
@@ -52,7 +52,7 @@ class AboutController extends Controller
 
             $about->save();
 
-            return redirect()->route('admin');
+            return redirect()->route('about.index');
         }
         
     }

@@ -26,9 +26,13 @@ class TeamController extends Controller
      */
     public function create()
     {
-        return view('Team.create');
-    }
+        $team = Team::all();
+        if (count($team) < 4) {
 
+            return view('Team.create',compact('team'));
+        }
+        
+    }
     /**
      * Store a newly created resource in storage.
      *

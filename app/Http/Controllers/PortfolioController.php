@@ -12,13 +12,19 @@ class PortfolioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
+    
+    
+    
     public function index()
     {
         $portfolios = Portfolio::all();
-
-        return view('Portfolio.indexPortfolio', compact('portfolios'));
+        
+        $portfolio = \DB::table('portfolios')->get();
+        
+        return view('Portfolio.indexPortfolio', compact('portfolios'), ['portfolios'=>$portfolio]);
     }
-
+    //
     /**
      * Show the form for creating a new resource.
      *
@@ -27,7 +33,15 @@ class PortfolioController extends Controller
     public function create()
     {
         return view('Portfolio.createPortfolio ');
-     }
+    }
+    
+        public function search(Request $request){
+            $search = $request->get('search');
+            $portfolio = \DB::table('portfolios')->where('name','like','%'.$search.'%')->paginate(10);
+    
+            return view('Portfolio.indexPortfolio',['portfolios'=>$portfolio]);
+    
+        }
 
     /**
      * Store a newly created resource in storage.

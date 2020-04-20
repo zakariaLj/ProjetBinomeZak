@@ -213,13 +213,7 @@ return [
             'search' => true,
             'topnav' => true,
         ],
-        [
-        'text' => 'pages',
-        'url' => 'admin/pages',
-        'icon' => 'far fa-fw fa-file',
-        'label' => 4,
-        'label_color' => 'success',
-        ],
+
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
@@ -227,6 +221,11 @@ return [
         ],
 
         ['header' => 'account_settings'],
+        [
+        'text' => 'Retour au site',
+        'url' => '/',
+        'icon' => 'fas fa-globe-americas',
+        ],
         [
             'text' => 'profile',
             'url'  => 'admin/settings',
@@ -237,10 +236,8 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
-        [
-            'text'    => 'Table',
-            'icon' => 'fas fa-table',
-            'submenu' => [
+
+        
                 [
                 'text' => 'Section Header',
                 'url' => 'header/index',
@@ -264,7 +261,7 @@ return [
                 ],
                 [
                 'text' => 'Section Subscribe',
-                'url' => 'subscribe.editSubscribe',
+                'url' => '/subscribe/indexSubscribe',
                 'icon'=>"fas fa-link",
                 ],
                 [
@@ -282,8 +279,7 @@ return [
                 'url' => '/admin/message',
                 'icon'=>"fas fa-inbox",
                 ],
-            ],
-        ],
+
         ['header' => 'labels'],
         [
             'text'       => 'important',

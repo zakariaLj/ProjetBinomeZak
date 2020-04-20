@@ -214,10 +214,10 @@ return [
             'topnav' => true,
         ],
         [
-        'text' => 'Retour au site',
-        'url' => '/',
-        'icon' => 'fas fa-globe',
-        // 'label' => ,
+        'text' => 'pages',
+        'url' => 'admin/pages',
+        'icon' => 'far fa-fw fa-file',
+        'label' => 4,
         'label_color' => 'success',
         ],
         [
@@ -247,20 +247,20 @@ return [
                 ],
                 [
                 'text' => 'Section About ',
-                'url' => 'About/editAbout',
+                'url' => '#',
                 ],
 
                 [
                 'text' => 'Section Portfolio',
-                'url' => 'Portfolio',
+                'url' => '#',
                 ],
                 [
                 'text' => 'Section Team',
-                'url' => 'Team',
+                'url' => '#',
                 ],
                 [
                 'text' => 'Section Subscribe',
-                'url' => 'subscribe.editSubscribe',
+                'url' => 'subscribe/indexSubscribe',
                 ],
                 [
                 'text' => 'Section Services',
@@ -268,15 +268,27 @@ return [
                 ],
                 [
                 'text' => 'Section Testimonials',
-                'url' => 'testimonial',
+                'url' => '#',
                 ],
                 [
                 'text' => 'Section contact',
-                'url' => '/admin/message',
+                'url' => '#',
                 ],
             ],
         ],
-
+        ['header' => 'labels'],
+        [
+            'text'       => 'important',
+            'icon_color' => 'red',
+        ],
+        [
+            'text'       => 'warning',
+            'icon_color' => 'yellow',
+        ],
+        [
+            'text'       => 'information',
+            'icon_color' => 'aqua',
+        ],
     ],
 
     /*

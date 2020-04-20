@@ -11,7 +11,7 @@
             <div class="form-group">
                 <div class="form-group">
                     <label for="titre">Titre</label>
-                <input type="string" id="titre"  name='titre' class="form-control" value='{{!empty($service) ? $service->Titre : ''}}'   >
+                <input type="string" id="titre"  name='titre' class="form-control" value='{{!empty($service) ? $service->titre : ''}}'   >
                 </div>
 
                 <div class="form-group">
@@ -36,7 +36,7 @@
                     <div class="form-group">
                         <label for="description">Description</label>
                         <textarea name="description" id="description" cols="30" rows="10" class='form-control' >
-                            {{!empty($service) ? $service->ServiceDescription : ''}}
+                            {{!empty($service) ? $service->description : ''}}
                         </textarea>
                         <button type="submit" class="d-block mx-auto btn btn-primary">Modifier</button>
                 </form>

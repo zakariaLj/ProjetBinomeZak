@@ -38,10 +38,16 @@ Route::get('/admin', function () {
     return view('admin');
 })->name('admin');
 
-Route::get('subscribe.editSubscribe','SubscribeController@edit');
-Route::post('subscribe.editSubscribe','SubscribeController@update')->name('subscribe.update'); 
+Route::get('/subscribe/indexSubscribe','SubscribeController@index');
+Route::get('/subscribe/editSubscribe','SubscribeController@edit')->name('subscribe.edit');
+Route::post('/subscribe/editSubscribe','SubscribeController@update')->name('subscribe.update'); 
+
+// Route Admin-> Service
 
 Route::resource('/service','ServiceController');
+
+// Route admin-> Testimonial
+
 Route::resource('/testimonial','TestimonialController');
 
 Route::get('/header/editHeader', 'HeaderController@edit')->name('header.edit');
@@ -59,5 +65,8 @@ Route::resource('/Portfolio','PortfolioController');
 // Route Admin-> Team
 
 Route::resource('/Team','TeamController');
+
+// Route Message(contact)
+
 Route::post('/message','MessageController@store')->name('message.store');
 Route::get('/admin/message','MessageController@index');

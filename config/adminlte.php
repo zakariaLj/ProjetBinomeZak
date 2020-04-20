@@ -260,19 +260,19 @@ return [
                 ],
                 [
                 'text' => 'Section Subscribe',
-                'url' => '#',
+                'url' => 'subscribe.editSubscribe',
                 ],
                 [
                 'text' => 'Section Services',
-                'url' => '#',
+                'url' => 'service',
                 ],
                 [
                 'text' => 'Section Testimonials',
-                'url' => '#',
+                'url' => 'testimonial',
                 ],
                 [
                 'text' => 'Section contact',
-                'url' => '#',
+                'url' => '/admin/message',
                 ],
             ],
         ],

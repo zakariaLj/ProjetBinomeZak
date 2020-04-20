@@ -45500,8 +45500,8 @@ jQuery(document).ready(function ($) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\zakar\OneDrive\Bureau\Coding-Shool11\Laravel\Projet whit Abou\ProjetBinomeZak\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\zakar\OneDrive\Bureau\Coding-Shool11\Laravel\Projet whit Abou\ProjetBinomeZak\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\wamp64\www\ProjetBinomeZak\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\wamp64\www\ProjetBinomeZak\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ }),

@@ -8,7 +8,7 @@
             @csrf
             <div class="form-group">
                     <label for="lien">Lien</label>
-                <input type="text" id="lien"  name='lien' class="form-control" value="{{!empty($subscribe) ? $subscribe->link : ''}}"  >
+                <input type="text" id="lien"  name='lien' class="form-control"   >
             </div>
         </form>
 </div>

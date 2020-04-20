@@ -10,12 +10,12 @@
             <div class="form-group">
                 <div class="form-group">
                     <label for="nom">Nom</label>
-                <input type="string" id="nom"  name='nom' class="form-control" value='{{!empty($testimonial) ? $testimonial->Nom : ''}}'   >
+                <input type="string" id="nom"  name='nom' class="form-control" value='{{$testimonial->nom}}'   >
                 </div>
 
                 <div class="form-group">
                     <label for="fonction">Fonction</label>
-                <input type="string" id="fonction"  name='fonction' class="form-control" value='{{!empty($testimonial) ? $testimonial->Fonction : ''}}'   >
+                <input type="string" id="fonction"  name='fonction' class="form-control" value='{{$testimonial->fonction}}'   >
                 </div>
 
                 <div class="form-group">

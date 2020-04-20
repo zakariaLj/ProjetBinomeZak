@@ -23,10 +23,10 @@
             <h4>{{$team->Name}}</h4>
             <span>{{$team->Descriptionteam}}</span>
             <div class="social">
-              <a href="{{$team->url}}"><i class="fa fa-twitter"></i></a>
-              <a href="{{$team->url}}"><i class="fa fa-facebook"></i></a>
-              <a href="{{$team->url}}"><i class="fa fa-google-plus"></i></a>
-              <a href="{{$team->url}}"><i class="fa fa-linkedin"></i></a>
+              <a href="{{$team->url}}"><i class="fab fa-twitter"></i></a>
+              <a href="{{$team->url}}"><i class="fab fa-facebook"></i></a>
+              <a href="{{$team->url}}"><i class="fab fa-google-plus"></i></a>
+              <a href="{{$team->url}}"><i class="fab fa-linkedin"></i></a>
             </div>
           </div>
         </div>

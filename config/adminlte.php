@@ -243,36 +243,44 @@ return [
             'submenu' => [
                 [
                 'text' => 'Section Header',
-                'url' => 'header/editHeader',
+                'url' => 'header/index',
+                'icon' => "fas fa-heading",
                 ],
                 [
                 'text' => 'Section About ',
                 'url' => 'About/editAbout',
+                'icon'=>"far fa-address-card",
                 ],
 
                 [
                 'text' => 'Section Portfolio',
                 'url' => 'Portfolio',
+                'icone'=> "fas fa-file-upload",
                 ],
                 [
                 'text' => 'Section Team',
                 'url' => 'Team',
+                'icon'=>"fas fa-user-friends",
                 ],
                 [
                 'text' => 'Section Subscribe',
                 'url' => 'subscribe.editSubscribe',
+                'icon'=>"fas fa-link",
                 ],
                 [
                 'text' => 'Section Services',
                 'url' => 'service',
+                'icon'=>"fab fa-servicestack"
                 ],
                 [
                 'text' => 'Section Testimonials',
                 'url' => 'testimonial',
+                'icon'=>"fas fa-newspaper",
                 ],
                 [
                 'text' => 'Section contact',
                 'url' => '/admin/message',
+                'icon'=>"fas fa-inbox",
                 ],
             ],
         ],

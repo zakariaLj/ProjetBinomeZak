@@ -2,7 +2,7 @@
 <!--==========================
   Hero Section
   ============================-->
-  <section id="hero">
+  <section id="hero" style="  background: url(storage/{{$header->FondImg_path}}) top center;">
     <div class="hero-container">
       <div class="wow fadeIn">
         <div class="hero-logo">

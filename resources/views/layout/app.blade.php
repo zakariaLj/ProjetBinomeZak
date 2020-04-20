@@ -33,7 +33,9 @@
 
   <!-- Libraries CSS Files -->
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="{{asset('vendor/fontawesome-free/css/fontawesome.min.css')}}" rel="stylesheet">
+  {{-- <link href="{{asset('vendor/fontawesome-free/css/fontawesome.min.css')}}" rel="stylesheet"> --}}
+  <link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet">
+
   <link href="lib/animate-css/animate.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->

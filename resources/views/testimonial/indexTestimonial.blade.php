@@ -5,9 +5,9 @@
     <div class="container mt-5 pt-5">
         <h1 class='text-center mt-3 pt-3'>Créer mes Testimonials</h1>
 
-        @if (count($testimonials)<2)
+        {{-- @if (count($testimonials)<2) --}}
         <a href="{{route('testimonial.create')}}">Ajouter</a>    
-        @endif
+        {{-- @endif --}}
 
         <table class="table">
             <thead>
@@ -24,7 +24,7 @@
                 <tr>
                 <td>{{$testimonial->nom}}</td>    
                 <td>{{$testimonial->fonction}}</td>
-                <td><img src="{{asset('storage/'.$testimonial->img_path)}}" alt="" st></td>
+                <td><img style='width:100px; border-radius:115px' src="{{asset('storage/'.$testimonial->img_path)}}" alt="" st></td>
                 <td>{{$testimonial->commentaire}}</td>
                 <td>
                 <a href="{{route('testimonial.edit',$testimonial->id)}}">

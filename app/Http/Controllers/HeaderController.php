@@ -8,6 +8,14 @@ use App\Header;
 
 class HeaderController extends Controller
 {
+
+    public function index(){
+        $header = Header::find(1);
+        return view('header.index', compact('header'));
+    }
+
+
+
     public function edit(){
         $header = Header::find(1);
 
@@ -29,7 +37,10 @@ class HeaderController extends Controller
                 $header->imgHeader_path =request('img')->store('img');
 
             }
-                        
+            if (request('imgFond') != null) {
+                $header->FondImg_path =request('imgFond')->store('img');
+                
+            }            
                     $header->Titre = request('titre');
                     $header->HeaderDescription = request('description');
 
@@ -38,6 +49,8 @@ class HeaderController extends Controller
         }else{      // Dans ce cas il n'existe pas on va devoir avoir besoin d'un new header
                         $header = new Header();
 
+
+                        $header->FondImg_path =request('imgFond')->store('img');
                         $header->imgHeader_path =request('img')->store('img');
                         $header->Titre = request('titre');
                         $header->HeaderDescription = request('description');

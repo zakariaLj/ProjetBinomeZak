@@ -44,8 +44,11 @@ Route::post('subscribe.editSubscribe','SubscribeController@update')->name('subsc
 Route::resource('service','ServiceController');
 Route::resource('testimonial','TestimonialController');
 
+
+// Route header
 Route::get('/header/editHeader', 'HeaderController@edit')->name('header.edit');
 Route::post('/header/editHeader', 'HeaderController@update')->name('header.update');
+Route::get('/header/index', 'HeaderController@index')->name('header.index');;
 
 // Route Admin-> About
 

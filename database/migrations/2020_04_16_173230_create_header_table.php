@@ -16,6 +16,7 @@ class CreateHeaderTable extends Migration
         Schema::create('header', function (Blueprint $table) {
             $table->id();
             $table->string('imgHeader_path',50);
+            $table->string('FondImg_path',50);
             $table->string('Titre',50);
             $table->string('HeaderDescription', 100);
             $table->timestamps();

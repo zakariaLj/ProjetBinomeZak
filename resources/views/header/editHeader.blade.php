@@ -17,20 +17,33 @@
                 <div class="form-group">
                     <label for="titre">Titre</label>
                 <input type="text" id="titre"  name='titre' class="form-control" value='{{!empty($header) ? $header->Titre : ''}}'   >
-                </div>
-
-                <label for="img">Photo de profile</label>
+                </div>  
+                
+                <label for="img">Logo</label>
                 <input type="file" id="img"  name='img' class="form-control" >
                 @if(!empty($header) ){
                 <img src="{{asset('storage/'.$header->imgHeader_path)}}" alt="" >
                 }
                 @endif
-            </div>
-                
+
+                <div>
+
+                    <label for="imgFond">Image de fond</label>
+                    <input type="file" id="imgFond"  name='imgFond' class="form-control" >
+                    @if(!empty($header) ){
+                    <img src="{{asset('storage/'.$header->FondImg_path)}}" alt="" >
+                    }
+                    @endif
+                </div>
+
+
+
                 <div class="form-group">
                     <label for="description">Description</label>
                     <textarea name="description" id="description" cols="30" rows="10" class='form-control' >{{!empty($header) ? $header->HeaderDescription : ''}}</textarea>
                         <button type="submit" class="d-block mx-auto btn btn-primary">Modifier</button>
+            </div>
+                
             </form>
     </div>
 @endsection

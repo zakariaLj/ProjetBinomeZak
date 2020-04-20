@@ -33,6 +33,7 @@
 
   <!-- Libraries CSS Files -->
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="{{asset('vendor/fontawesome-free/css/fontawesome.min.css')}}" rel="stylesheet">
   <link href="lib/animate-css/animate.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
@@ -48,7 +49,6 @@
 <body>
 
     @yield('content')
-
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <script src="{{asset('js/app.js')}}"></script>

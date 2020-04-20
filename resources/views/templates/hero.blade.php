@@ -11,6 +11,8 @@
         </div>
           @else
           <img class="" src="img/logo.png" alt="Imperial">
+          
+
               
           @endif
         </div>
@@ -20,6 +22,7 @@
         @else
           <h1>Welcome to Imperial studios</h1>
           <h2>We create <span class="rotating">beautiful graphics, functional websites, working mobile apps</span></h2>
+          
         @endif
         
         <div class="actions">

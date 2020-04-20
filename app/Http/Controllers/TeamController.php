@@ -42,6 +42,7 @@ class TeamController extends Controller
         $team->Name = request('nom');
         $team->Imgteam_path = request('img')->store('img');
         $team->Descriptionteam = request('description');
+        $team->url = request('lien');
         $team->save();
 
         return redirect()->route('Team.index');
@@ -86,8 +87,8 @@ class TeamController extends Controller
 
             }
         $team->Name = request('nom');
-        $team->Imgteam_path = request('img')->store('img');
         $team->Descriptionteam = request('description');
+        $team->url = request('lien');
         
         $team->save();
 

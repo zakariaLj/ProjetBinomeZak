@@ -28,10 +28,51 @@
 
 
               {{-- photo de l'employé --}}
-                  <div class="form-group">
+                <div class="form-group">
                   <label for="img">Photo de l'employe</label>
-                  <input type="file" class="form-control-file" name="img" id="img" placeholder="Import img" aria-describedby="fileHelpId" value ="{{$team->Imgteam_path}}"/>
+                  <div>
+                    <img style=" width:20%;"src="{{asset('storage/'.$team->Imgteam_path)}}" alt="" srcset="">
+                      @if ($team !== null)
+                          <input type="file" id="img"  name='img' class="form-control" value="{{$team->Imgteam_path}}">
+                      @else
+                          <input type="file" id="img"  name='img' class="form-control" value="">                    
+                      @endif               
+
+                  </div>
+               </div>
+
+               
+                    {{-- // Icone et url --}}
+                  <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text "><i class="fab fa-twitter"></i></span>
+                  </div>
+                  <input type="url" class="form-control w-10" placeholder="url" name='lien' id='lien' value='{{$team->url}}'>
                 </div>
+
+
+                  <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text "><i class="fab fa-facebook"></i></span>
+                  </div>
+                  <input type="url" class="form-control w-10" placeholder="url" name='lien' id='lien' value='{{$team->url}}'>
+                </div>
+
+               <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text "><i class="fab fa-google-plus"></i></span>
+                  </div>
+                  <input type="url" class="form-control w-10" placeholder="url" name='lien' id='lien' value='{{$team->url}}'>
+                </div>
+
+               <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text "><i class="fab fa-linkedin"></i></span>
+                  </div>
+                  <input type="url" class="form-control w-10" placeholder="url" name='lien' id='lien' value='{{$team->url}}'>
+                </div>
+                
+
                  
             </div>
                 <!-- /.card-body -->

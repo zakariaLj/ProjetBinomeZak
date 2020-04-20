@@ -5,7 +5,7 @@
     <div class="container wow fadeInUp">
       <div class="row">
         <div class="col-md-12">
-          <h3 class="section-title">About Us</h3>
+          <h3 class="section-title">About Us </h3>
           <div class="section-title-divider"></div>
           @if ($about != null)
           <p class="section-description">{{$about->description_1}}</p>

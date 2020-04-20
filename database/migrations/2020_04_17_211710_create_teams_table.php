@@ -18,6 +18,7 @@ class CreateTeamsTable extends Migration
             $table->string('Name',50);
             $table->string('Imgteam_path',100);
             $table->string('Descriptionteam',50);
+            $table->string('url',100);
             $table->timestamps();
         });
     }

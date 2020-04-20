@@ -18,17 +18,17 @@
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="radio1" value="fas fa-cookie">
                         <label class="form-check-label"></i></label>
-                        <i class="fab fa-cookie"></i>
+                        <i class="fas fa-cookie"></i>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="radio1" value="fas fa-cat">
                         <label class="form-check-label"></label>
-                        <i class="fab fa-cat"></i>
+                        <i class="fas fa-cat"></i>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="radio1" value="fas fa-heart">
                         <label class="form-check-label"></label>
-                        <i class="fab fa-heart"></i>
+                        <i class="fas fa-heart"></i>
                       </div>
                 </div>
                     <div class="form-group">

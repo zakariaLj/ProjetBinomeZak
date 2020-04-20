@@ -28,7 +28,11 @@
                 <a href="{{route('service.edit',$service->id)}}">
                         <button class="btn btn-primary">éditer</button>
                     </a>
+                    <form action="{{route('service.destroy', $service->id)}}" method="post">
+                        @csrf
+                        @method('delete')
                     <button class="btn btn-danger">supprimer</button>
+                    </form>
                 </td>
                 </tr> 
             @endforeach

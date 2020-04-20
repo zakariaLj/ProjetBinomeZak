@@ -41,8 +41,8 @@ Route::get('/admin', function () {
 Route::get('subscribe.editSubscribe','SubscribeController@edit');
 Route::post('subscribe.editSubscribe','SubscribeController@update')->name('subscribe.update'); 
 
-Route::resource('service','ServiceController');
-Route::resource('testimonial','TestimonialController');
+Route::resource('/service','ServiceController');
+Route::resource('/testimonial','TestimonialController');
 
 Route::get('/header/editHeader', 'HeaderController@edit')->name('header.edit');
 Route::post('/header/editHeader', 'HeaderController@update')->name('header.update');

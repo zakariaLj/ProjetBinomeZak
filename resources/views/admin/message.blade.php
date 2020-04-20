@@ -18,7 +18,7 @@
             @foreach ($messages as $message)
                 <tr>
                 <td>{{$message->nom}}</td>    
-                <td>{{$message->email}}></i></td>
+                <td>{{$message->email}}</td>
                 <td>{{$message->subject}}</td>
                 <td>{{$message->message}}</td>
                 </tr> 

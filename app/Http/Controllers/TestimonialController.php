@@ -102,6 +102,12 @@ class TestimonialController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $testimonial = Testimonial::find($id);
+
+        Storage::delete($testimonial->img_path);
+
+        $testimonial->delete();
+
+        return redirect()->back();
     }
 }

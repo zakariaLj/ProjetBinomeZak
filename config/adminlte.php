@@ -214,10 +214,10 @@ return [
             'topnav' => true,
         ],
         [
-        'text' => 'Retour au site',
-        'url' => '/',
-        'icon' => 'fas fa-globe',
-        // 'label' => ,
+        'text' => 'pages',
+        'url' => 'admin/pages',
+        'icon' => 'far fa-fw fa-file',
+        'label' => 4,
         'label_color' => 'success',
         ],
         [
@@ -284,7 +284,19 @@ return [
                 ],
             ],
         ],
-
+        ['header' => 'labels'],
+        [
+            'text'       => 'important',
+            'icon_color' => 'red',
+        ],
+        [
+            'text'       => 'warning',
+            'icon_color' => 'yellow',
+        ],
+        [
+            'text'       => 'information',
+            'icon_color' => 'aqua',
+        ],
     ],
 
     /*

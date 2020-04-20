@@ -30,7 +30,11 @@
                 <a href="{{route('testimonial.edit',$testimonial->id)}}">
                         <button class="btn btn-primary">éditer</button>
                     </a>
+                    <form action="{{route('testimonial.destroy', $testimonial->id)}}" method="post">
+                        @csrf
+                        @method('delete')
                     <button class="btn btn-danger">supprimer</button>
+                    </form>
                 </td>
                 </tr> 
             @endforeach

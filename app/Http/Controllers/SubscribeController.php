@@ -7,12 +7,21 @@ use App\Subscribe;
 
 class SubscribeController extends Controller
 {
+
+    public function index(){
+        
+        $subscribe = Subscribe::find(1);
+        return view('subscribe.indexSubscribe',compact('subscribe'));
+    }
+
+
+
     public function edit(){
         $subscribe = Subscribe::find(1);
         if ($subscribe != null) {
             return view('subscribe.editSubscribe', compact('subscribe')); 
         } else {
-            return view('subscribe.editSubscribe');
+            return view('subscribe.indexSubscribe');
         }
     }
     
@@ -31,4 +40,5 @@ class SubscribeController extends Controller
 
         }
     }
+
 }

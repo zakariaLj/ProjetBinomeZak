@@ -248,7 +248,7 @@ return [
                 ],
                 [
                 'text' => 'Section About ',
-                'url' => 'About/editAbout',
+                'url' => 'About/indexAbout ',
                 'icon'=>"far fa-address-card",
                 ],
 

@@ -8,6 +8,14 @@ use App\About;
 
 class AboutController extends Controller
 {
+    public function index(){
+        $about = About::find(1);
+
+        return view('about.index',compact('about'));
+    }
+
+
+
     public function edit(){
         $about = About::find(1);
 

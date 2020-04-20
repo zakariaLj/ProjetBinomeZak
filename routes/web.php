@@ -54,6 +54,8 @@ Route::get('/header/index', 'HeaderController@index')->name('header.index');;
 
 Route::get('/About/editAbout', 'AboutController@edit')->name('about');
 Route::post('/About/editAbout', 'AboutController@update')->name('about.update');
+Route::get('/About/indexAbout', 'AboutController@index')->name('about.index');
+
 
 // Route Admin->Portfolio
 

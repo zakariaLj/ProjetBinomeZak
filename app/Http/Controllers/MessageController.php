@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Message;
+use Illuminate\Support\Facades\Storage;
 
 class MessageController extends Controller
 {
@@ -24,4 +25,23 @@ class MessageController extends Controller
         $message->save();
         return redirect()->back();
     }
+
+    public function show($id){
+        $messages = Message::all();
+        return view ('admin.showMessage', compact('messages'));
+    }
+
+    public function destroy($id){
+        
+        $message = Message::find($id);
+
+        Storage::delete($message);
+
+        $message->delete();
+
+        return redirect()->back();
+    }
+    
+    
 }
+

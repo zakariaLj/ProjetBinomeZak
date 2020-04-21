@@ -9,7 +9,7 @@
         <a href="{{route('testimonial.create')}}">Ajouter</a>    
         @endif
 
-        <table class="table">
+        {{-- <table class="table">
             <thead>
                 <tr>
                     <th scope="col">Nom</th>
@@ -18,10 +18,24 @@
                     <th scope="col">Commentaire</th>
                     <th scope="col">Action</th>
                 </tr>
-            </thead>
-            <tbody>
+            </thead> --}}
+            <div class="row mr-2">
             @foreach ($testimonials as $testimonial)
-                <tr>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{asset('storage/'.$testimonial->img_path)}}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{$testimonial->nom}}</h5>
+                  <p class="card-text">{{$testimonial->commentaire}}</p>
+                  <p>
+                  <a href="{{route('testimonial.edit',$testimonial->id)}}" class="btn btn-primary">éditer</a>
+                  <form action="{{route('testimonial.destroy', $testimonial->id)}}" method="post">
+                    @csrf
+                    @method('delete')
+                <button class="btn btn-danger ">supprimer</button>
+                </p>
+                </div>
+              </div>
+                {{-- <tr>
                 <td>{{$testimonial->nom}}</td>    
                 <td>{{$testimonial->fonction}}</td>
                 <td><img src="{{asset('storage/'.$testimonial->img_path)}}" alt="" st></td>
@@ -36,9 +50,12 @@
                     <button class="btn btn-danger">supprimer</button>
                     </form>
                 </td>
-                </tr> 
+                </tr>  --}}
             @endforeach
-            </tbody>    
+        </div>
         </table>
+    </div>
 
     @endsection 
+
+    

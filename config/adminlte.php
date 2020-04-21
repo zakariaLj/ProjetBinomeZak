@@ -247,16 +247,16 @@ return [
                 ],
                 [
                 'text' => 'Section About ',
-                'url' => '#',
+                'url' => 'About/editAbout',
                 ],
 
                 [
                 'text' => 'Section Portfolio',
-                'url' => '#',
+                'url' => 'Portfolio',
                 ],
                 [
                 'text' => 'Section Team',
-                'url' => '#',
+                'url' => 'Team',
                 ],
                 [
                 'text' => 'Section Subscribe',
@@ -268,11 +268,11 @@ return [
                 ],
                 [
                 'text' => 'Section Testimonials',
-                'url' => '#',
+                'url' => 'testimonial',
                 ],
                 [
                 'text' => 'Section contact',
-                'url' => '#',
+                'url' => '/admin/message',
                 ],
             ],
         ],

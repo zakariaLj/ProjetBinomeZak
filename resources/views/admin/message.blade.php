@@ -21,9 +21,20 @@
                 <td>{{$message->email}}</td>
                 <td>{{$message->subject}}</td>
                 <td>{{$message->message}}</td>
+                
+                <td>
+                <form action="{{route('message.destroy', '$message->id')}}" method="post" enctype="multipart/form-data">
+                    @csrf
+                    @method('delete')
+                    <a href="{{route('message.show','$message->id')}}">Editez vos messages</a>
+                    <button class="btn btn-danger" type="submit">supprimer</button>
+                </form>
+                </td>
+
                 </tr> 
             @endforeach
+            
             </tbody>    
         </table>
 
-    @endsection    
+    @endsection
